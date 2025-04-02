@@ -1,0 +1,49 @@
+{
+    "Games": [
+        {
+            "id": 1,
+            "Titre": "The Legend of Zelda: Breath of the Wild",
+            "Developpeur": "Nintendo",
+            "DateDeSortie": "2017-03-03",
+            "StockDisponible": 15,
+            "Plateforme": "Switch",
+            "Genre": "Action-Adventure"
+        },
+        {
+            "id": 2,
+            "Titre": "Elden Ring",
+            "Developpeur": "FromSoftware",
+            "DateDeSortie": "2022-02-25",
+            "StockDisponible": 10,
+            "Plateforme": "PC",
+            "Genre": "RPG"
+        },
+        {
+            "id": 3,
+            "Titre": "God of War Ragnarök",
+            "Developpeur": "Santa Monica Studio",
+            "DateDeSortie": "2022-11-09",
+            "StockDisponible": 8,
+            "Plateforme": "PlayStation",
+            "Genre": "Action-Adventure"
+        },
+        {
+            "id": 4,
+            "Titre": "Halo Infinite",
+            "Developpeur": "343 Industries",
+            "DateDeSortie": "2021-12-08",
+            "StockDisponible": 12,
+            "Plateforme": "Xbox",
+            "Genre": "FPS"
+        },
+        {
+            "id": 5,
+            "Titre": "Cyberpunk 2077",
+            "Developpeur": "CD Projekt Red",
+            "DateDeSortie": "2020-12-10",
+            "StockDisponible": 5,
+            "Plateforme": "PC",
+            "Genre": "RPG"
+        }
+    ]
+}
