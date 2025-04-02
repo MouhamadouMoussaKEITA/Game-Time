@@ -1,0 +1,5 @@
+<div class="list-game">
+    <ng-container *ngFor="let unGame of listGame">
+        <app-game *ngIf="unGame.StockDisponible > 0" [game]="unGame"></app-game>
+    </ng-container>
+</div>
