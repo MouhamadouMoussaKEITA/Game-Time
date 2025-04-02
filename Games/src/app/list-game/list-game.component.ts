@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GamesService } from '../services/games.service';
+import { GamesService } from '../services/game.service'; // Correct path
 import { Game } from '../Models/game.model';
 
 @Component({
@@ -14,7 +14,7 @@ export class ListGameComponent implements OnInit {
   constructor(private myGamesService: GamesService) { }
 
   ngOnInit(): void {
-    this.myGamesService.getGames().subscribe((games) => {
+    this.myGamesService.getGames().subscribe((games: Game[]) => { // Add type annotation
       this.listGame = games;
     });
   }
