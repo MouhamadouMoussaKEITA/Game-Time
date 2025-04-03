@@ -8,7 +8,27 @@
         En stock :
         <span [ngStyle]="{'color': theGame.StockDisponible > 0 ? 'green' : 'red'}">
             {{ theGame.StockDisponible }}
-        </span><br>
-        <br>
+        </span>
     </p>
+
+    <!-- Bouton pour afficher les réservations -->
+    <button (click)="toggleReservations()">Réservations</button>
+
+    <!-- Section des réservations -->
+    <div *ngIf="showReservations" class="reservations">
+        <h4>Réservations</h4>
+        <div *ngIf="theGame.reservations.length > 0; else noReservations">
+            <div *ngFor="let reservation of theGame.reservations" class="reservation-card">
+                <p><strong>Nom du client :</strong> {{ reservation.NomClient }}</p>
+                <p><strong>Email :</strong> {{ reservation.EmailClient }}</p>
+                <p><strong>Téléphone :</strong> {{ reservation.TelephoneClient }}</p>
+                <p><strong>Date de réservation :</strong> {{ reservation.DateReservation | date: 'dd/MM/yyyy' }}</p>
+                <p><strong>Statut :</strong> {{ reservation.Statut }}</p>
+                <hr>
+            </div>
+        </div>
+        <ng-template #noReservations>
+            <p>Aucune réservation pour ce jeu.</p>
+        </ng-template>
+    </div>
 </div>

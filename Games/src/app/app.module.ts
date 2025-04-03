@@ -12,6 +12,8 @@ import { ListGameComponent } from './list-game/list-game.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GamesService } from './services/game.service';
+import { NewGameComponent } from './new-game/new-game.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { GamesService } from './services/game.service';
     GameComponent,
     HeaderComponent,
     HomeComponent,
+    NewGameComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

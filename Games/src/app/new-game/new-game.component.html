@@ -1,0 +1,91 @@
+<div class="form-container">
+    <section class="subform saisieForm">
+        <h2>Ajouter un Jeu</h2>
+        <form [formGroup]="formulaire">
+            <div class="form-group">
+                <label for="title">Titre</label>
+                <input type="text" id="title" formControlName="Titre" />
+                <div
+                    *ngIf="formulaire.get('Titre')?.invalid && (formulaire.get('Titre')?.dirty || formulaire.get('Titre')?.touched)">
+                    <small class="text-danger" *ngIf="formulaire.get('Titre')?.hasError('required')">Ce champ est
+                        requis</small>
+                    <small class="text-danger" *ngIf="formulaire.get('Titre')?.hasError('minlength')">Le titre doit
+                        contenir au moins 3 caractères</small>
+                </div>
+                <br>
+
+                <!-- Date de sortie -->
+                <label for="dateDeSortie">Date de sortie</label>
+                <input type="date" id="dateDeSortie" formControlName="DateDeSortie" />
+                <div
+                    *ngIf="formulaire.get('DateDeSortie')?.invalid && (formulaire.get('DateDeSortie')?.dirty || formulaire.get('DateDeSortie')?.touched)">
+                    <small class="text-danger" *ngIf="formulaire.get('DateDeSortie')?.hasError('required')">Ce champ est
+                        requis</small>
+                </div>
+                <br>
+
+                <!-- Développeur -->
+                <label for="developpeur">Développeur</label>
+                <input type="text" id="developpeur" formControlName="Developpeur" />
+                <div
+                    *ngIf="formulaire.get('Developpeur')?.invalid && (formulaire.get('Developpeur')?.dirty || formulaire.get('Developpeur')?.touched)">
+                    <small class="text-danger" *ngIf="formulaire.get('Developpeur')?.hasError('required')">Ce champ est
+                        requis</small>
+                </div>
+                <br>
+
+                <!-- Plateforme -->
+                <label for="plateforme">Plateforme</label>
+                <input type="text" id="plateforme" formControlName="Plateforme" />
+                <div
+                    *ngIf="formulaire.get('Plateforme')?.invalid && (formulaire.get('Plateforme')?.dirty || formulaire.get('Plateforme')?.touched)">
+                    <small class="text-danger" *ngIf="formulaire.get('Plateforme')?.hasError('required')">Ce champ est
+                        requis</small>
+                </div>
+                <br>
+
+                <!-- Genre -->
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" formControlName="Genre" />
+                <div
+                    *ngIf="formulaire.get('Genre')?.invalid && (formulaire.get('Genre')?.dirty || formulaire.get('Genre')?.touched)">
+                    <small class="text-danger" *ngIf="formulaire.get('Genre')?.hasError('required')">Ce champ est
+                        requis</small>
+                </div>
+                <br>
+
+                <!-- Stock disponible -->
+                <label for="stockDisponible">Stock disponible</label>
+                <input type="number" id="stockDisponible" formControlName="StockDisponible" />
+                <div
+                    *ngIf="formulaire.get('StockDisponible')?.invalid && (formulaire.get('StockDisponible')?.dirty || formulaire.get('StockDisponible')?.touched)">
+                    <small class="text-danger" *ngIf="formulaire.get('StockDisponible')?.hasError('required')">Ce champ
+                        est requis</small>
+                </div>
+                <br>
+
+                <!-- Bouton d'ajout -->
+                <button type="button" (click)="onSubmit()" [disabled]="formulaire.invalid">Ajouter le Jeu</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="subform visuForm">
+        <h2>Vue du Jeu</h2>
+        <div *ngIf="currentGame!== undefined">
+            <div class="game-card">
+                <h3>{{ currentGame.Titre }}</h3>
+                <p>Sortie le : {{ currentGame.DateDeSortie | date: 'dd/MM/yyyy' }}</p>
+                <p>Développeur : {{ currentGame.Developpeur }}</p>
+                <p>Plateforme : {{ currentGame.Plateforme }}</p>
+                <p>Genre : {{ currentGame.Genre }}</p>
+                <p>
+                    En stock :
+                    <span [ngStyle]="{'color': currentGame.StockDisponible > 0 ? 'green' : 'red'}">
+                        {{ currentGame.StockDisponible }}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+</div>

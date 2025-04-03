@@ -1,7 +1,9 @@
 .game-card {
-    box-sizing: border-box;
-    padding: 20px 30px;
-    box-shadow: lightgrey 4px 4px 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 img {
@@ -36,4 +38,36 @@ button {
     &.gameadded {
         background-color: rgba(44, 172, 44, 0.514);
     }
+}
+
+.reservations {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.reservations h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.reservation-card {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.reservation-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.reservation-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
 }

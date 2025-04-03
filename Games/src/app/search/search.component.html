@@ -1,0 +1,15 @@
+<div class="game-card">
+    <h2>Résultats de recherche pour "{{ searchQuery }}"</h2>
+    <div *ngIf="searchResults.length > 0; else noResults">
+        <div *ngFor="let game of searchResults" class="game-card">
+            <h3>{{ game.Titre }}</h3>
+            <p>Développeur : {{ game.Developpeur }}</p>
+            <p>Plateforme : {{ game.Plateforme }}</p>
+            <p>Genre : {{ game.Genre }}</p>
+            <p>Stock disponible : {{ game.StockDisponible }}</p>
+        </div>
+    </div>
+    <ng-template #noResults>
+        <p>Aucun jeu trouvé pour "{{ searchQuery }}".</p>
+    </ng-template>
+</div>

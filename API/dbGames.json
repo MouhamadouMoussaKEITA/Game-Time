@@ -1,49 +1,134 @@
 {
-    "Games": [
+  "Games": [
+    {
+      "id": "1",
+      "Titre": "The Legend of Zelda",
+      "Developpeur": "Nintendo",
+      "DateDeSortie": "2017-03-03",
+      "StockDisponible": 15,
+      "Plateforme": "Switch",
+      "Genre": "Action-Adventure",
+      "reservations": [
         {
-            "id": 1,
-            "Titre": "The Legend of Zelda: Breath of the Wild",
-            "Developpeur": "Nintendo",
-            "DateDeSortie": "2017-03-03",
-            "StockDisponible": 15,
-            "Plateforme": "Switch",
-            "Genre": "Action-Adventure"
-        },
-        {
-            "id": 2,
-            "Titre": "Elden Ring",
-            "Developpeur": "FromSoftware",
-            "DateDeSortie": "2022-02-25",
-            "StockDisponible": 10,
-            "Plateforme": "PC",
-            "Genre": "RPG"
-        },
-        {
-            "id": 3,
-            "Titre": "God of War Ragnarök",
-            "Developpeur": "Santa Monica Studio",
-            "DateDeSortie": "2022-11-09",
-            "StockDisponible": 8,
-            "Plateforme": "PlayStation",
-            "Genre": "Action-Adventure"
-        },
-        {
-            "id": 4,
-            "Titre": "Halo Infinite",
-            "Developpeur": "343 Industries",
-            "DateDeSortie": "2021-12-08",
-            "StockDisponible": 12,
-            "Plateforme": "Xbox",
-            "Genre": "FPS"
-        },
-        {
-            "id": 5,
-            "Titre": "Cyberpunk 2077",
-            "Developpeur": "CD Projekt Red",
-            "DateDeSortie": "2020-12-10",
-            "StockDisponible": 5,
-            "Plateforme": "PC",
-            "Genre": "RPG"
+          "NomClient": "Alice Dupont",
+          "EmailClient": "alice.dupont@example.com",
+          "TelephoneClient": "0123456789",
+          "TitreJeu": "The Legend of Zelda",
+          "Plateforme": "Switch",
+          "DateReservation": "2023-12-01",
+          "Statut": "Confirmée"
         }
-    ]
+      ]
+    },
+    {
+      "id": "2",
+      "Titre": "Elden Ring",
+      "Developpeur": "FromSoftware",
+      "DateDeSortie": "2022-02-25",
+      "StockDisponible": 10,
+      "Plateforme": "PC",
+      "Genre": "RPG",
+      "reservations": [
+        {
+          "NomClient": "Jean Martin",
+          "EmailClient": "jean.martin@example.com",
+          "TelephoneClient": "0987654321",
+          "TitreJeu": "Elden Ring",
+          "Plateforme": "PC",
+          "DateReservation": "2023-11-15",
+          "Statut": "En attente"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "Titre": "God of War Ragnarök",
+      "Developpeur": "Santa Monica Studio",
+      "DateDeSortie": "2022-11-09",
+      "StockDisponible": 8,
+      "Plateforme": "PlayStation",
+      "Genre": "Action-Adventure",
+      "reservations": [
+        {
+          "NomClient": "Sophie Bernard",
+          "EmailClient": "sophie.bernard@example.com",
+          "TelephoneClient": "0678901234",
+          "TitreJeu": "God of War Ragnarök",
+          "Plateforme": "PlayStation",
+          "DateReservation": "2023-10-20",
+          "Statut": "Annulée"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "Titre": "Halo Infinite",
+      "Developpeur": "343 Industries",
+      "DateDeSortie": "2021-12-08",
+      "StockDisponible": 12,
+      "Plateforme": "Xbox",
+      "Genre": "FPS",
+      "reservations": [
+        {
+          "NomClient": "Paul Durand",
+          "EmailClient": "paul.durand@example.com",
+          "TelephoneClient": "0765432109",
+          "TitreJeu": "Halo Infinite",
+          "Plateforme": "Xbox",
+          "DateReservation": "2023-09-30",
+          "Statut": "Confirmée"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "Titre": "Cyberpunk 2077",
+      "Developpeur": "CD Projekt Red",
+      "DateDeSortie": "2020-12-10",
+      "StockDisponible": 5,
+      "Plateforme": "PC",
+      "Genre": "RPG",
+      "reservations": [
+        {
+          "NomClient": "Emma Lefevre",
+          "EmailClient": "emma.lefevre@example.com",
+          "TelephoneClient": "0654321987",
+          "TitreJeu": "Cyberpunk 2077",
+          "Plateforme": "PC",
+          "DateReservation": "2023-08-25",
+          "Statut": "En attente"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "Titre": "FC 25",
+      "DateDeSortie": "2024-08-10",
+      "Developpeur": "EA Sport",
+      "Plateforme": "Playstation Network",
+      "Genre": "Football",
+      "StockDisponible": 100,
+      "reservations": [
+        {
+          "NomClient": "Lucas Moreau",
+          "EmailClient": "lucas.moreau@example.com",
+          "TelephoneClient": "0789012345",
+          "TitreJeu": "FC 25",
+          "Plateforme": "Playstation Network",
+          "DateReservation": "2023-07-15",
+          "Statut": "Confirmée"
+        }
+      ]
+    },
+    {
+      "id": "511",
+      "Titre": "Football Manager",
+      "DateDeSortie": "2024-01-03",
+      "Developpeur": "Sport Interactif",
+      "Plateforme": "Epic Games",
+      "Genre": "Football",
+      "StockDisponible": 10,
+      "reservations": []
+    }
+  ]
 }

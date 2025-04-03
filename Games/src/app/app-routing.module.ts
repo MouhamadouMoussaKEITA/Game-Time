@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListGameComponent } from './list-game/list-game.component';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
+import { NewGameComponent } from './new-game/new-game.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
@@ -17,7 +19,14 @@ const routes: Routes = [
     path: 'game/:id',
     component: GameComponent
   },
-
+  {
+    path: 'new-game',
+    component: NewGameComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
+  }
 ];
 
 @NgModule({
@@ -25,7 +34,8 @@ const routes: Routes = [
 
   imports: [
     RouterModule.forRoot(routes),
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
 

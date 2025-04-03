@@ -15,15 +15,22 @@ export class GameComponent {
   theGame!: Game;
   idGame!: string;
 
+  showReservations: boolean = false; // Gère l'affichage de la zone de réservation
+
   constructor(private GameService: GamesService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.idGame = this.route.snapshot.params['id'];
     if (this.idGame !== undefined) {
-      this.GameService.getGameById(+this.idGame).subscribe(game => { this.theGame = game });
+      this.GameService.getGameById(+this.idGame).subscribe(game => {
+        this.theGame = game;
+      });
     } else {
       this.theGame = this.game;
     }
   }
 
+  toggleReservations(): void {
+    this.showReservations = !this.showReservations; // Affiche ou masque la zone de réservation
+  }
 }

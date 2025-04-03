@@ -1,4 +1,11 @@
 <h1>MY GAME APP</h1>
 <nav>
-    <a class="button" routerLink="/catalog">Acceuil</a><br>
+    <a class="button" routerLink="/catalog">Accueil</a><br>
+    <a class="button" routerLink="/new-game">Ajouter un Jeu</a><br>
+
+    <!-- Barre de recherche -->
+    <div class="navbar-search">
+        <input type="text" placeholder="Rechercher un jeu par titre..." [(ngModel)]="searchQuery"
+            (input)="onSearch()" />
+    </div>
 </nav>

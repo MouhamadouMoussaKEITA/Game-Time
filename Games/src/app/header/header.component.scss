@@ -1,5 +1,3 @@
-/* filepath: c:\wamp64\www\Angular\test\src\app\header\header.component.scss */
-
 h1 {
     text-align: center;
     color: #333;
@@ -12,11 +10,13 @@ h1 {
 
 nav {
     display: flex;
-    justify-content: left;
-    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -26,8 +26,23 @@ nav a {
     border-radius: 4px;
     background-color: #ffffff;
     transition: background-color 0.3s ease;
+    margin-right: 10px;
 }
 
 nav a:hover {
     background-color: #e0e0e0;
+}
+
+.navbar-search {
+    margin-left: auto;
+
+    /* Place la barre de recherche à droite */
+    input {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
 }
