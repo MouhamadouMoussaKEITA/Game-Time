@@ -1,0 +1,33 @@
+/* filepath: c:\wamp64\www\Angular\test\src\app\header\header.component.scss */
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e0e0e0;
+}

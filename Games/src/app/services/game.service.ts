@@ -11,10 +11,10 @@ export class GamesService {
     constructor(private http: HttpClient) { }
 
     getGames(): Observable<Game[]> {
-        return this.http.get<Game[]>('http://localhost:3000/CD');
+        return this.http.get<Game[]>('http://localhost:3000/Games');
     }
 
     getGameById(id: number): Observable<Game> {
-        return this.http.get<Game>('http://localhost:3000/CD/' + id);
+        return this.http.get<Game>('http://localhost:3000/Games/' + id);
     }
 }

@@ -1,1 +1,14 @@
-<p>game works!</p>
+<div class="game-card">
+    <h3>{{ theGame.Titre }}</h3>
+    <p>Sortie le : {{ theGame.DateDeSortie | date: 'dd/MM/yyyy' }}</p>
+    <p>Développeur : {{ theGame.Developpeur }}</p>
+    <p>Plateforme : {{ theGame.Plateforme }}</p>
+    <p>Genre : {{ theGame.Genre }}</p>
+    <p>
+        En stock :
+        <span [ngStyle]="{'color': theGame.StockDisponible > 0 ? 'green' : 'red'}">
+            {{ theGame.StockDisponible }}
+        </span><br>
+        <br>
+    </p>
+</div>
