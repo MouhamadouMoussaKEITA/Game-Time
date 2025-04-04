@@ -1,11 +1,18 @@
-<h1>MY GAME APP</h1>
-<nav>
-    <a class="button" routerLink="/catalog">Accueil</a><br>
-    <a class="button" routerLink="/new-game">Ajouter un Jeu</a><br>
-
-    <!-- Barre de recherche -->
-    <div class="navbar-search">
-        <input type="text" placeholder="Rechercher un jeu par titre..." [(ngModel)]="searchQuery"
-            (input)="onSearch()" />
+<header>
+    <div class="logo-container">
+        <!-- Icône de manette -->
+        <img src="assets/controller-icon.png" alt="Logo" class="logo" />
+        <h1>MY GAME APP</h1>
     </div>
-</nav>
+    <nav>
+        <a class="button" routerLink="/">Home</a>
+        <a class="button" routerLink="/catalog">Games</a>
+        <a class="button" routerLink="/new-game">Add Games</a>
+
+        <!-- Barre de recherche -->
+        <div class="navbar-search">
+            <input type="text" placeholder="Rechercher un jeu par titre..." [(ngModel)]="searchQuery"
+                (input)="onSearch()" />
+        </div>
+    </nav>
+</header>

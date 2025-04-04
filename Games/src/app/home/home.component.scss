@@ -1,7 +1,86 @@
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-shadow: 9px;
+.add-reservation-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.add-reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-reservation-form input,
+.add-reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-reservation-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-reservation-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Conteneur principal */
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    color: #4C6EFF;
+    /* Bleu vif */
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.container button {
+    background-color: #FF4C4C;
+    /* Rouge vif */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #E63939;
+    /* Rouge plus foncé */
+}
+
+/* Style pour l'image du logo */
+.home-logo {
+    width: 150px;
+    /* Taille de l'image */
+    height: auto;
+    margin-bottom: 20px;
+    /* Espace sous l'image */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre douce */
 }

@@ -14,7 +14,6 @@ export class HeaderComponent {
 
   onSearch(): void {
     if (this.searchQuery.trim()) {
-      // Redirige vers une page de recherche avec le titre comme paramètre
       this.router.navigate(['/search'], { queryParams: { title: this.searchQuery } });
     }
   }

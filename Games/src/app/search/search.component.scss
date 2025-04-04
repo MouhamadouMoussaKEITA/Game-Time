@@ -1,39 +1,323 @@
-.game-card {
-    box-sizing: border-box;
-    padding: 20px 30px;
-    box-shadow: lightgrey 4px 4px 20px;
+.add-reservation-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
 
-img {
+.add-reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-reservation-form input,
+.add-reservation-form select {
     width: 100%;
-}
-
-h2 {
-    margin-bottom: 0;
-}
-
-p {
-    font-weight: 300;
-    font-size: 16px;
-}
-
-button {
-    background-color: rgba(102, 87, 87, 0.37);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
-    padding: 5px 20px;
+}
+
+.add-reservation-form button {
+    background-color: #FF4C4C;
+    /* Rouge vif */
+    color: #fff;
+    padding: 10px 15px;
     border: none;
-    box-shadow: lightgrey 3px 3px 7px;
-    margin-right: 20px;
-    outline: none;
-    font-size: 14px;
-    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    &:active {
-        transform: translate(1px, 1px);
-        box-shadow: lightgray 0 0 5px;
-    }
+.add-reservation-form button:hover {
+    background-color: #E63939;
+    /* Rouge plus foncé */
+}
 
-    &.gameadded {
-        background-color: rgba(44, 172, 44, 0.514);
-    }
+/* Conteneur principal */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Style des cartes de jeu */
+.game-card {
+    flex: 1 1 60%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF4C4C;
+    /* Rouge vif */
+}
+
+.game-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Résultats de recherche */
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.search-results .game-card {
+    flex: 1 1 300px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-results .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card button {
+    background-color: #4C6EFF;
+    /* Bleu vif */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-card button:hover {
+    background-color: #3A4DBF;
+    /* Bleu plus foncé */
+}
+
+/* Conteneur des réservations */
+.reservations-container {
+    flex: 1 1 35%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+.reservations-container h4 {
+    font-size: 1.5rem;
+    color: #4C6EFF;
+    /* Bleu vif */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Style des réservations */
+.reservations {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.reservations h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.reservation-card {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.reservation-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.reservation-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+/* Message d'absence de résultats */
+.no-results {
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 20px;
+}
+
+/* Conteneur principal */
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style des cartes de jeu */
+.game-card {
+    flex: 1 1 60%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF4C4C;
+    /* Rouge vif */
+}
+
+.game-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Boutons */
+.game-card button {
+    background-color: #4C6EFF;
+    /* Bleu vif */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-card button:hover {
+    background-color: #3A4DBF;
+    /* Bleu plus foncé */
+}
+
+/* Conteneur des réservations */
+.reservations-container {
+    flex: 1 1 35%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+.reservations-container h4 {
+    font-size: 1.5rem;
+    color: #4C6EFF;
+    /* Bleu vif */
+    margin-bottom: 15px;
+}
+
+/* Style des réservations */
+.reservation-card {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.reservation-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+/* Formulaire d'ajout de réservation */
+.add-reservation-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.add-reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-reservation-form input,
+.add-reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-reservation-form button {
+    background-color: #FF4C4C;
+    /* Rouge vif */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-reservation-form button:hover {
+    background-color: #E63939;
+    /* Rouge plus foncé */
+}
+
+/* Message d'absence de résultats */
+.no-results {
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 20px;
 }

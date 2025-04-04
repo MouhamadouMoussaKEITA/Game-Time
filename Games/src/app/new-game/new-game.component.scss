@@ -1,125 +1,214 @@
-.monForm {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.subform {
-    width: 45%;
-}
-
-.saisieForm {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.saisieForm h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.saisieForm label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-
-.saisieForm input[type="text"],
-.saisieForm input[type="number"],
-.saisieForm input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+.add-reservation-form {
+    margin-top: 20px;
+    padding: 15px;
     border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.add-reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-reservation-form input,
+.add-reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-.saisieForm input[type="submit"] {
+.add-reservation-form button {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.saisieForm input[type="submit"]:hover {
+.add-reservation-form button:hover {
     background-color: #0056b3;
 }
 
-.visuForm {
-    background-color: #ffffff;
+/* Formulaire d'ajout de jeu */
+.new-game-form {
+    margin: 20px auto;
     padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new-game-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.new-game-form input,
+.new-game-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.new-game-form input:focus,
+.new-game-form select:focus {
+    border-color: #4CAF50;
+    /* Couleur principale (vert vif) */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.new-game-form button {
+    background-color: #4CAF50;
+    /* Couleur principale (vert vif) */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-game-form button:hover {
+    background-color: #388E3C;
+    /* Vert plus foncé */
+}
+
+/* Conteneur principal */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    /* Gris clair */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section du formulaire */
+.subform {
+    flex: 1 1 45%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subform h2 {
+    font-size: 1.8rem;
+    color: #FF4C4C;
+    /* Rouge vif */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Champs du formulaire */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    /* Gris foncé */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    border-color: #4C6EFF;
+    /* Bleu vif */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 110, 255, 0.5);
+}
+
+/* Bouton d'ajout */
+button {
+    background-color: #FF4C4C;
+    /* Rouge vif */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #E63939;
+    /* Rouge plus foncé */
+}
+
+/* Vue du jeu */
+.visuForm {
+    flex: 1 1 45%;
+    padding: 20px;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .visuForm h2 {
+    font-size: 1.8rem;
+    color: #4C6EFF;
+    /* Bleu vif */
     margin-bottom: 20px;
-    color: #333;
+    text-align: center;
 }
 
 .game-card {
-    background-color: #f1f1f1;
-    padding: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .game-card h3 {
+    font-size: 1.5rem;
+    color: #FF4C4C;
+    /* Rouge vif */
     margin-bottom: 10px;
-    color: #333;
 }
 
 .game-card p {
-    margin-bottom: 10px;
+    margin: 5px 0;
     color: #555;
 }
 
-.game-card img {
-    max-width: 100%;
-    border-radius: 4px;
-}
-
-.form-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-}
-
-.saisieForm,
-.visuForm {
-    flex: 1;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.visuForm {
-    max-width: 400px;
-}
-
-.game-card {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.game-card img {
-    max-width: 100%;
-    border-radius: 4px;
-    margin-top: 10px;
+.game-card span {
+    font-weight: bold;
+    color: #4C6EFF;
+    /* Bleu vif */
 }

@@ -1,48 +1,124 @@
-h1 {
-    text-align: center;
-    color: #333;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+.add-reservation-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.add-reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-reservation-form input,
+.add-reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-reservation-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-reservation-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Header */
+header {
+    background-color: #4C6EFF;
+    /* Bleu vif */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
+/* Navbar */
 nav {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 15px;
 }
 
 nav a {
-    color: #000000;
+    color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    font-weight: bold;
+    padding: 10px 15px;
     border-radius: 4px;
-    background-color: #ffffff;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #e0e0e0;
+    background-color: #FF4C4C;
+    /* Rouge vif */
+    color: #fff;
 }
 
+/* Barre de recherche */
 .navbar-search {
-    margin-left: auto;
+    flex-grow: 1;
+    max-width: 400px;
+    margin-left: 40px;
+}
 
-    /* Place la barre de recherche à droite */
-    input {
-        padding: 5px 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 1rem;
-        width: 100%;
-        max-width: 300px;
-    }
+.navbar-search input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-search input:focus {
+    border-color: #4C6EFF;
+    /* Bleu vif */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 110, 255, 0.5);
+}
+
+button {
+    background-color: #4CAF50;
+    /* Couleur principale (vert vif) */
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C;
+    /* Vert plus foncé */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }

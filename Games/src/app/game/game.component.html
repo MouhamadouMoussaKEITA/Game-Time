@@ -1,21 +1,24 @@
-<div class="game-card">
-    <h3>{{ theGame.Titre }}</h3>
-    <p>Sortie le : {{ theGame.DateDeSortie | date: 'dd/MM/yyyy' }}</p>
-    <p>Développeur : {{ theGame.Developpeur }}</p>
-    <p>Plateforme : {{ theGame.Plateforme }}</p>
-    <p>Genre : {{ theGame.Genre }}</p>
-    <p>
-        En stock :
-        <span [ngStyle]="{'color': theGame.StockDisponible > 0 ? 'green' : 'red'}">
-            {{ theGame.StockDisponible }}
-        </span>
-    </p>
+<div class="game-container">
+    <!-- Carte du jeu -->
+    <div class="game-card">
+        <h3>{{ theGame.Titre }}</h3>
+        <p>Sortie le : {{ theGame.DateDeSortie | date: 'dd/MM/yyyy' }}</p>
+        <p>Développeur : {{ theGame.Developpeur }}</p>
+        <p>Plateforme : {{ theGame.Plateforme }}</p>
+        <p>Genre : {{ theGame.Genre }}</p>
+        <p>
+            En stock :
+            <span [ngStyle]="{'color': theGame.StockDisponible > 0 ? 'green' : 'red'}">
+                {{ theGame.StockDisponible }}
+            </span>
+        </p>
 
-    <!-- Bouton pour afficher les réservations -->
-    <button (click)="toggleReservations()">Réservations</button>
+        <!-- Bouton pour afficher les réservations -->
+        <button (click)="toggleReservations()">Réservations</button>
+    </div>
 
     <!-- Section des réservations -->
-    <div *ngIf="showReservations" class="reservations">
+    <div *ngIf="showReservations" class="reservations-container">
         <h4>Réservations</h4>
         <div *ngIf="theGame.reservations.length > 0; else noReservations">
             <div *ngFor="let reservation of theGame.reservations" class="reservation-card">
@@ -25,10 +28,44 @@
                 <p><strong>Date de réservation :</strong> {{ reservation.DateReservation | date: 'dd/MM/yyyy' }}</p>
                 <p><strong>Statut :</strong> {{ reservation.Statut }}</p>
                 <hr>
+
             </div>
         </div>
         <ng-template #noReservations>
             <p>Aucune réservation pour ce jeu.</p>
         </ng-template>
+
+        <!-- Bouton pour ajouter une réservation -->
+        <button (click)="toggleAddReservation()">Ajouter une réservation</button>
+
+        <!-- Formulaire pour ajouter une réservation -->
+        <div *ngIf="showAddReservation" class="add-reservation-form">
+            <h4>Ajouter une réservation</h4>
+            <form (ngSubmit)="onAddReservation()">
+                <label for="nomClient">Nom du client</label>
+                <input type="text" id="nomClient" [(ngModel)]="newReservation.NomClient" name="nomClient" required />
+
+                <label for="emailClient">Email du client</label>
+                <input type="email" id="emailClient" [(ngModel)]="newReservation.EmailClient" name="emailClient"
+                    required />
+
+                <label for="telephoneClient">Numéro de téléphone</label>
+                <input type="tel" id="telephoneClient" [(ngModel)]="newReservation.TelephoneClient"
+                    name="telephoneClient" required />
+
+                <label for="dateReservation">Date de réservation</label>
+                <input type="date" id="dateReservation" [(ngModel)]="newReservation.DateReservation"
+                    name="dateReservation" required />
+
+                <label for="statut">Statut</label>
+                <select id="statut" [(ngModel)]="newReservation.Statut" name="statut" required>
+                    <option value="Confirmée">Confirmée</option>
+                    <option value="En attente">En attente</option>
+                    <option value="Annulée">Annulée</option>
+                </select>
+
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
     </div>
 </div>
